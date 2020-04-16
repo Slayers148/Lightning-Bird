@@ -6,12 +6,13 @@ import com.devtraining.mission3.model.Game;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Service;
+import com.devtraining.mission2.repository.GameRepository;
 
 import javax.sql.DataSource;
 import java.util.*;
 
 @Service
-public class GameService {
+public class GameService implements GameRepository{
     DataSource dataSource = new SpringJdbcConfig().mysqlDataSource();
 
     JdbcTemplate jdbcTemplate = new JdbcTemplate(dataSource);
