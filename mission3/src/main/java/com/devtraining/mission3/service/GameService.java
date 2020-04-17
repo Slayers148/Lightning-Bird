@@ -41,34 +41,4 @@ public class GameService implements GameRepository{
         String sql = "delete from game where id="+id+"";
         jdbcTemplate.update(sql);
     }
-//
-//    private List<Game> gameList = new ArrayList<>(Arrays.asList(
-//
-//            new Game(1, "ff7", "sqex"),
-//            new Game(2, "ff8", "sqex"),
-//            new Game(3, "ff9", "sqex")
-//
-//    ));
-//
-//    public List<Game> getAllGamesList(){
-//        return gameList;
-//    }
-//    public Game getGame(Long id){
-//        return gameList.stream().filter(topic -> topic.getId().equals(id)).findFirst().get();
-//    }
-//    public void addGame(Game game){
-//        gameList.add(game);
-//    }
-//    public void updateGame(Game game, Long id){
-//        int counter = 0;
-//        for (Game game1 : gameList){
-//            if(game1.getId().equals(id)){
-//                gameList.set(counter, game);
-//            }
-//            counter++;
-//        }
-//    }
-//    public void deleteGame(Long id){
-//        gameList.removeIf(game -> game.getId().equals(id));
-//    }
 }
